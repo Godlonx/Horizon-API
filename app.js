@@ -18,12 +18,7 @@ app.get('/greet', (req, res) => {
   res.status(200).json({ message: 'Hello, world!' });
 });
 
-sequelize.sync({ force: true }).then(async () => {
-  await User.create({
-    username: 'johndoe',
-    email: 'john@doe',
-    password: '123john'
-  });
+sequelize.sync().then(async () => {
 
   app.listen(port, async () => {
     console.log(`Example app listening on port ${port}`);
