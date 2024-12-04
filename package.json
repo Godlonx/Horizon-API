@@ -2,8 +2,9 @@
   "name": "horizon-api",
   "version": "1.0.0",
   "description": "Repository pour le projet Horizon ydays 2024-2025",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "mocha"
   },
   "author": "",
