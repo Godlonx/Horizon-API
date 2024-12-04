@@ -10,8 +10,13 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+app.get('/greet', (req, res) => {
+  res.status(200).json({ message: 'Hello, world!' });
+});
+
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
     console.log(`http://localhost:${port}`)
-    console.log(`Swagger UI available at http://localhost:${PORT}/api-docs`);
+    console.log(`Swagger UI available at http://localhost:${port}/api-docs`);
   })
