@@ -35,7 +35,8 @@ const GetCharacterById = async (req, res) => {
 
 const updateCharacter = async (req, res) => {
     try {
-        const updatedcharacter = await characterRepository.updateCharacter(req.params.id, req.body);
+        let updatedcharacter = await characterRepository.updateCharacter(req.params.id, req.body);
+        updatedcharacter = characterRepository.toModel(updatedcharacter);
         return res.status(200).json(updatedcharacter);
     }
     catch (error) {

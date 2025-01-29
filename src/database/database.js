@@ -8,7 +8,7 @@ const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.D
     port: process.env.DB_PORT
 });
 
-const characterModel=CharactersModel(db);
+const characterModel = CharactersModel(db);
 
 db.sync();
 

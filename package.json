@@ -2,11 +2,12 @@
   "name": "horizon-api",
   "version": "1.0.0",
   "description": "Repository pour le projet Horizon ydays 2024-2025",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "nodemon --env-file=.env app.js",
+    "start": "nodemon --env-file=.env src/app.js",
     "test": "mocha"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
