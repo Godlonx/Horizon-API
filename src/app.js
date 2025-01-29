@@ -6,8 +6,9 @@ import characterRouter from './pkg/character/route.js';
 const app = express();
 const swaggerDocument = YAML.load('./swagger.yaml');
 
-app.use(express.json())
+app.use(express.json()) 
 app.use(express.urlencoded({ extended: true }))
+app.use('/characters', characterRouter);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/api/v1/characters', characterRouter);
