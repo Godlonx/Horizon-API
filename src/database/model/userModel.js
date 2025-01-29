@@ -1,4 +1,5 @@
 import { DataTypes } from "sequelize"
+import { db } from "../database";
 
 const UserModel = (sequelize) => {
     class User extends Model {}
@@ -62,3 +63,7 @@ const UserModel = (sequelize) => {
     })
     return User;
 }
+
+const userModel = UserModel(db);
+
+export default userModel;
