@@ -45,7 +45,7 @@ const updateCharacter = async (req, res) => {
 
 const deleteCharacter = async (req, res) => {
     try {
-        const deletedcharacter = await characterRepository.deleteCharacter(req.params.id);
+        await characterRepository.deleteCharacter(req.params.id);
         return res.status(200).json({message: "Character deleted"});
     }
     catch (error) {
