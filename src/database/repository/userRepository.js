@@ -1,0 +1,1 @@
+import { characterModel} from "../database.js";
