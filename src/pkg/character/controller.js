@@ -1,6 +1,6 @@
 import * as characterRepository from "../../../src/database/repository/characterRepository.js";
 
-const createCharacter = async (req, res) => {
+const CreateCharacter = async (req, res) => {
     try {
         let newcharacter = await characterRepository.createCharacter(req.body);
         newcharacter = characterRepository.toModel(newcharacter);
@@ -14,7 +14,7 @@ const createCharacter = async (req, res) => {
 const GetCharacters = async (req, res) => {
     try {
         let characters = await characterRepository.GetCharacters();
-        characters = characters.map(characterRepository.toModel);
+        characters = characters.map(characterRepository.ToModel);
         return res.status(200).json(characters);
     }
     catch (error) {
@@ -33,7 +33,7 @@ const GetCharacterById = async (req, res) => {
     }
 }
 
-const updateCharacter = async (req, res) => {
+const UpdateCharacter = async (req, res) => {
     try {
         let updatedcharacter = await characterRepository.updateCharacter(req.params.id, req.body);
         updatedcharacter = characterRepository.toModel(updatedcharacter);
@@ -44,7 +44,7 @@ const updateCharacter = async (req, res) => {
     }
 }
 
-const deleteCharacter = async (req, res) => {
+const DeleteCharacter = async (req, res) => {
     try {
         await characterRepository.deleteCharacter(req.params.id);
         return res.status(200).json({message: "Character deleted"});
@@ -54,4 +54,4 @@ const deleteCharacter = async (req, res) => {
     }
 }
 
-export {createCharacter, GetCharacters, GetCharacterById, updateCharacter, deleteCharacter};
+export {CreateCharacter, GetCharacters, GetCharacterById, UpdateCharacter, DeleteCharacter};

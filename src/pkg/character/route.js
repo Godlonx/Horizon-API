@@ -6,9 +6,9 @@ const characterRouter = express.Router();
 
 characterRouter.get("/",characterController.GetCharacters);
 characterRouter.get("/:id", characterController.GetCharacterById);
-characterRouter.post("/", characterController.createCharacter);
-characterRouter.put("/:id", characterController.updateCharacter);
-characterRouter.delete("/:id", characterController.deleteCharacter);
+characterRouter.post("/", characterController.CreateCharacter);
+characterRouter.put("/:id", characterController.UpdateCharacter);
+characterRouter.delete("/:id", characterController.DeleteCharacter);
 
 export default characterRouter;
 

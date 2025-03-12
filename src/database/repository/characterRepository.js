@@ -5,7 +5,7 @@ const GetCharacters = async () => {
     return characters
 }
 
-const createCharacter = async (character) => {
+const CreateCharacter = async (character) => {
     try{
         return await characterModel.create(character);
     } catch (error) {
@@ -28,7 +28,7 @@ const GetCharacterById = async (id) => {
     }
 }
 
-const updateCharacter = async (id, characterbody) => {
+const UpdateCharacter = async (id, characterbody) => {
     const character = await characterModel.findByPk(id);
     if (!character) {
         throw new Error("Character not found");
@@ -42,7 +42,7 @@ const updateCharacter = async (id, characterbody) => {
     }
 }
 
-const deleteCharacter = async (id) => {
+const DeleteCharacter = async (id) => {
     const character = await characterModel.findByPk(id);
     if (!character) {
         throw new Error("Character not found");
@@ -51,7 +51,7 @@ const deleteCharacter = async (id) => {
     }
 }
 
-const toModel = (character) => {
+const ToModel = (character) => {
     return {
         id: character.id,
         userId: character.userId,
@@ -60,4 +60,4 @@ const toModel = (character) => {
     }
 }
 
-export { GetCharacters, createCharacter, GetCharacterById, updateCharacter, deleteCharacter, toModel };
+export { GetCharacters, CreateCharacter, GetCharacterById, UpdateCharacter, DeleteCharacter, ToModel };

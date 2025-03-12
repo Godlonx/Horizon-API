@@ -1,6 +1,6 @@
 import { userModel } from "../database.js";
 
-const Create = async (user) => {
+const CreateUsers = async (user) => {
     try{
         return await userModel.create(user);
     } catch (error) {
@@ -69,7 +69,7 @@ const ToModel = (user) => {
 }
 
 const userRepository = {
-    Create,
+    CreateUsers,
     GetAllUsers,
     GetUserById,
     UpdateUser,
