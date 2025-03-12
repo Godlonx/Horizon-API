@@ -1,5 +1,6 @@
+import { Model, DataTypes, INTEGER, STRING } from "sequelize";
 
-const skillModel = (id, dice, effect, bonus) =>  {
+const skillModel = (sequelize) =>  {
     class skill extends Model {}
 
     skill.init({
