@@ -1,4 +1,5 @@
 import { Model, DataTypes, INTEGER, STRING } from "sequelize";
+import { userModel } from "../database.js";
 
 const CharactersModel = (sequelize) => {
     class Character extends Model {}
@@ -12,7 +13,11 @@ const CharactersModel = (sequelize) => {
         },
         userId: {
             type : DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references:{
+                model:userModel,
+                key:"id",
+            }
         },
         name: {
             type: DataTypes.STRING,
