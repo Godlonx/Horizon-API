@@ -1,4 +1,4 @@
-# Guide GitHub
+export default CharactersModel;# Guide GitHub
 
 ### Introduction
 
@@ -12,7 +12,7 @@ Ce document définit les règles et bonnes pratiques pour l'utilisation de GitHu
   - [Installation](#installation)
 - **[Bonne Pratique](#bonne-pratique)**
   - [Gestion des Branches](#gestion-des-branches)
-  - [Conventions des Commits](#conventions-des-commits)
+  - [Conventions des Commits](#conventions-des-commits)export default CharactersModel;
   - [Merge Requests (MR)](#merge-requests-mr)
 - **[Comment faire ?](#comment-faire-)**
   - [Création d'une branche](#création-dun-branche)

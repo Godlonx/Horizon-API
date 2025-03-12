@@ -1,3 +1,5 @@
+import * as skillRepository from "../../../src/database/repository/skillRepository.js";
+
 const createSkill = async (req, res) => {
     try {
         let newskill = await skillRepository.createSkill(req.body);
